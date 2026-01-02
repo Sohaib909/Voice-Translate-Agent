@@ -1,0 +1,142 @@
+.voice-translator {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.status {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status.connected {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status.disconnected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.language-indicator {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.record-button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.record-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.record-button.recording {
+  background: #ef4444;
+  color: white;
+  animation: pulse 1.5s infinite;
+}
+
+.record-button:not(.recording) {
+  background: #3b82f6;
+  color: white;
+}
+
+.record-button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.messages {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  min-height: 400px;
+  max-height: 600px;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.message:last-child {
+  border-bottom: none;
+}
+
+.original-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.translated-text {
+  font-size: 16px;
+  color: #3b82f6;
+  font-style: italic;
+}
+
+.translating {
+  color: #9ca3af;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.empty-state {
+  text-align: center;
+  color: #9ca3af;
+  padding: 4rem 0;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "voice-translation-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "dev": "ts-node --transpile-only index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  },
+  "optionalDependencies": {
+    "openai": "^4.104.0"
+  }
+}
